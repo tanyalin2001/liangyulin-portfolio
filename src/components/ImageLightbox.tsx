@@ -2,6 +2,7 @@
 
 import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
+import basePath from '@/lib/basePath';
 import { useEffect } from 'react';
 
 interface ImageLightboxProps {
@@ -38,7 +39,7 @@ export default function ImageLightbox({ src, alt, onClose }: ImageLightboxProps)
             className="relative max-w-[90vw] max-h-[90vh]"
           >
             <Image
-              src={src}
+              src={`${basePath}${src}`}
               alt={alt}
               width={1200}
               height={800}

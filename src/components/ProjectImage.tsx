@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import basePath from '@/lib/basePath';
 
 interface ProjectImageProps {
   src: string;
@@ -27,7 +28,7 @@ export default function ProjectImage({ src, alt, onClick, className = '' }: Proj
       `}
     >
       <Image
-        src={src}
+        src={`${basePath}${src}`}
         alt={alt}
         width={600}
         height={400}

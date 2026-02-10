@@ -6,6 +6,7 @@ import Link from 'next/link';
 import Card from '@/components/Card';
 import SectionHeader from '@/components/SectionHeader';
 import Tag from '@/components/Tag';
+import basePath from '@/lib/basePath';
 
 const skills = {
   Frontend: ['React', 'Next.js', 'TypeScript', 'TailwindCSS', 'MUI'],
@@ -36,7 +37,7 @@ export default function AboutPage() {
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-br from-[var(--morandi-blue-300)] to-[var(--morandi-red-300)] rounded-full blur-lg opacity-30 scale-110" />
               <Image
-                src="/profile.jpg"
+                src={`${basePath}/profile.jpg`}
                 alt="Liang Yu Lin"
                 width={180}
                 height={180}
