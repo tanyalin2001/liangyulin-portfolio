@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <title>Contact - Liang Yu Lin</title>
+</head>
+<body>
+
+<nav>
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo">
+      <span class="nav-logo-accent"></span>
+      Liang Yu Lin
+    </a>
+    <ul>
+      <li><a href="index.html">About</a></li>
+      <li><a href="experience.html">Experience</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container">
+  <h1>Contact</h1>
+
+  <div class="card">
+    <h2>Get in Touch</h2>
+    <p style="margin-bottom: 28px;">Feel free to reach out through any of the channels below. I'm always open to discussing new projects, opportunities, or just having a chat about TCGs!</p>
+
+    <p><strong>Email:</strong> <a href="mailto:tanyalin2001@gmail.com">tanyalin2001@gmail.com</a></p>
+    <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/liangyu-lin2001/" target="_blank" rel="noopener">linkedin.com/in/liangyu-lin2001</a></p>
+    <p><strong>GitHub:</strong> <a href="https://github.com/tanyalin2001" target="_blank" rel="noopener">github.com/tanyalin2001</a></p>
+    <p><strong>Phone:</strong> +1 (832) 973-2663</p>
+  </div>
+</div>
+
+<footer>© 2025 Liang Yu Lin</footer>
+
+<!-- Scroll to top button -->
+<div class="scroll-indicator" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M12 4l-8 8h5v8h6v-8h5z"/>
+  </svg>
+</div>
+
+<script>
+  window.addEventListener('scroll', () => {
+    const indicator = document.querySelector('.scroll-indicator');
+    if (window.scrollY > 300) {
+      indicator.classList.add('visible');
+    } else {
+      indicator.classList.remove('visible');
+    }
+  });
+</script>
+
+</body>
+</html>

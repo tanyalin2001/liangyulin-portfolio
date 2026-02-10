@@ -1,18 +1,29 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-  <title>Projects – Liang Yu Lin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <title>Projects - Liang Yu Lin</title>
 </head>
 <body>
 
 <nav>
-  <ul>
-    <li><a href="index.html">About</a></li>
-    <li><a href="experience.html">Experience</a></li>
-    <li><a href="projects.html">Projects</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo">
+      <span class="nav-logo-accent"></span>
+      Liang Yu Lin
+    </a>
+    <ul>
+      <li><a href="index.html">About</a></li>
+      <li><a href="experience.html">Experience</a></li>
+      <li><a href="projects.html" class="active">Projects</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
 </nav>
 
 <div class="container">
@@ -21,114 +32,126 @@
   <!-- Inventory Management Tool -->
   <div class="card">
     <h2>Inventory Management Tool</h2>
-
-    <!-- Flex container for 2 screenshots -->
-    <div style="display:flex; gap:10px; margin-bottom:15px;">
+    <div class="project-images">
       <img src="img/inventory-purchase.png"
            alt="Inventory Purchase Screenshot"
            onclick="openLightbox(this.src)"
-           style="width:50%; border-radius:10px; cursor:pointer;">
-
+           style="width:50%;">
       <img src="img/inventory-dashboard.png"
            alt="Inventory Dashboard Screenshot"
            onclick="openLightbox(this.src)"
-           style="width:50%; border-radius:10px; cursor:pointer;">
+           style="width:50%;">
     </div>
-
-    <ul style="margin-left:15px; margin-bottom:15px;">
+    <ul>
       <li>Supports 10,000+ card records and multiple stores.</li>
       <li>MongoDB transactions ensure atomic and consistent updates across collections.</li>
       <li>Bulk editing UI built with MUI DataGrid for fast data correction.</li>
       <li>Purchase, sales, and inventory sync with FIFO-based deduction logic.</li>
     </ul>
+    <p>
+      <span class="tag blue">MongoDB</span>
+      <span class="tag blue">React</span>
+      <span class="tag dark">MUI</span>
+    </p>
   </div>
 
   <!-- Lock It Lending -->
   <div class="card">
     <h2>Lock It Lending Website</h2>
-
-    <img src="img/lockitlending-website.png" 
-         alt="Lock It Lending Website Screenshot" 
+    <img src="img/lockitlending-website.png"
+         alt="Lock It Lending Website Screenshot"
          onclick="openLightbox(this.src)"
-         style="width:100%; border-radius:10px; margin-bottom:15px; cursor:pointer;">
-
-    <ul style="margin-left:15px; margin-bottom:15px;">
+         class="project-image">
+    <ul>
       <li>Production-ready business website built with React, TypeScript, and TailwindCSS.</li>
       <li>Designed all UI/UX and connected the frontend with backend services.</li>
       <li>Deployed via Render with a CI/CD workflow for stable releases.</li>
       <li>Includes a quote request form that emails client information to the company.</li>
     </ul>
-
-    <a href="https://www.lockitlending.com/" class="project-link">Lock It Lending Website</a>
+    <p>
+      <span class="tag blue">React</span>
+      <span class="tag blue">TypeScript</span>
+      <span class="tag red">TailwindCSS</span>
+    </p>
+    <a href="https://www.lockitlending.com/" class="project-link" target="_blank" rel="noopener">Visit Website</a>
   </div>
 
   <!-- Sparkle GA Platform -->
   <div class="card">
     <h2>Sparkle GA Community Platform</h2>
-
-    <img src="img/sparklega.png" 
-         alt="Sparkle GA Platform Screenshot" 
+    <img src="img/sparklega.png"
+         alt="Sparkle GA Platform Screenshot"
          onclick="openLightbox(this.src)"
-         style="width:100%; border-radius:10px; margin-bottom:15px; cursor:pointer;">
-
-    <ul style="margin-left:15px; margin-bottom:15px;">
+         class="project-image">
+    <ul>
       <li>Next.js platform serving Grand Archive TCG players.</li>
       <li>Provides hero guides, card rules, decklists, and articles all in Chinese.</li>
       <li>Mobile-first design and deployed as a PWA on Vercel for fast access.</li>
       <li>Built contributor-friendly content workflow so multiple editors can update easily.</li>
     </ul>
-
-    <a href="https://www.sparklega.com/" class="project-link">Sparkle GA</a>
+    <p>
+      <span class="tag blue">Next.js</span>
+      <span class="tag dark">PWA</span>
+      <span class="tag red">Vercel</span>
+    </p>
+    <a href="https://www.sparklega.com/" class="project-link" target="_blank" rel="noopener">Visit Platform</a>
   </div>
 
   <!-- ETL Pipeline Manager -->
   <div class="card">
     <h2>ETL Pipeline Manager</h2>
-
-    <img src="img/ETLpipeline.png" 
-         alt="ETL Pipeline Manager Screenshot" 
+    <img src="img/ETLpipeline.png"
+         alt="ETL Pipeline Manager Screenshot"
          onclick="openLightbox(this.src)"
-         style="width:100%; border-radius:10px; margin-bottom:15px; cursor:pointer;">
-
-    <ul style="margin-left:15px; margin-bottom:20px;">
+         class="project-image">
+    <ul>
       <li>ETL microservice system using Express, TypeScript, RabbitMQ, MySQL, and MongoDB.</li>
       <li>Supports ingestion from APIs, SQL/NoSQL databases, and file-based sources.</li>
       <li>Achieved 95% frontend and 80% backend test coverage using Jest & Supertest.</li>
       <li>Developed for a Halliburton-sponsored industry project.</li>
     </ul>
+    <p>
+      <span class="tag blue">Express</span>
+      <span class="tag blue">TypeScript</span>
+      <span class="tag red">RabbitMQ</span>
+      <span class="tag dark">MySQL</span>
+    </p>
   </div>
 
   <!-- 1314 Shadowbrook Street Game -->
   <div class="card">
-    <h2>1314 Shadowbrook Street – Mystery Platformer Game</h2>
-
-    <div style="display:flex; gap:10px; margin-bottom:15px;">
+    <h2>1314 Shadowbrook Street — Mystery Platformer Game</h2>
+    <div class="project-images">
       <img src="img/game-1.png"
            alt="Game Screenshot 1"
            onclick="openLightbox(this.src)"
-           style="width:25%; border-radius:10px; cursor:pointer;">
+           style="width:25%;">
       <img src="img/game-2.png"
            alt="Game Screenshot 2"
            onclick="openLightbox(this.src)"
-           style="width:25%; border-radius:10px; cursor:pointer;">
+           style="width:25%;">
       <img src="img/game-3.png"
            alt="Game Screenshot 3"
            onclick="openLightbox(this.src)"
-           style="width:25%; border-radius:10px; cursor:pointer;">
+           style="width:25%;">
       <img src="img/game-4.png"
            alt="Game Screenshot 4"
            onclick="openLightbox(this.src)"
-           style="width:25%; border-radius:10px; cursor:pointer;">
+           style="width:25%;">
     </div>
-
-    <ul style="margin-left:15px; margin-bottom:15px;">
+    <ul>
       <li>Team-developed 2.5D exploration-focused platformer built in Unity.</li>
       <li>Story-driven mystery set in a cursed mansion trapped in a time loop.</li>
       <li>Turn-based Yahtzee-style combat system with reroll and rune-combination mechanics.</li>
       <li>Player uncovers that they are the scientist who caused the curse, tying together the narrative twist.</li>
       <li>Level design mixes spooky hallways, unique rooms, NPC encounters, and enemy battles.</li>
-      <li>“Cutesy-spooky” haunted mansion art direction to keep it atmospheric but approachable.</li>
+      <li>"Cutesy-spooky" haunted mansion art direction to keep it atmospheric but approachable.</li>
     </ul>
+    <p>
+      <span class="tag blue">Unity</span>
+      <span class="tag dark">C#</span>
+      <span class="tag red">Game Design</span>
+    </p>
   </div>
 
 </div>
@@ -136,17 +159,15 @@
 <footer>© 2025 Liang Yu Lin</footer>
 
 <!-- Lightbox -->
-<div id="lightbox" style="
-  display:none;
-  position:fixed;
-  top:0; left:0;
-  width:100%; height:100%;
-  background:rgba(0,0,0,0.8);
-  justify-content:center;
-  align-items:center;
-  z-index:9999;
-">
-  <img id="lightbox-img" src="" style="max-width:90%; max-height:90%; border-radius:10px;">
+<div id="lightbox">
+  <img id="lightbox-img" src="" alt="Enlarged view">
+</div>
+
+<!-- Scroll to top button -->
+<div class="scroll-indicator" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M12 4l-8 8h5v8h6v-8h5z"/>
+  </svg>
 </div>
 
 <script>
@@ -154,9 +175,25 @@
     document.getElementById('lightbox-img').src = src;
     document.getElementById('lightbox').style.display = 'flex';
   }
+
   document.getElementById('lightbox').onclick = () => {
     document.getElementById('lightbox').style.display = 'none';
   };
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      document.getElementById('lightbox').style.display = 'none';
+    }
+  });
+
+  window.addEventListener('scroll', () => {
+    const indicator = document.querySelector('.scroll-indicator');
+    if (window.scrollY > 300) {
+      indicator.classList.add('visible');
+    } else {
+      indicator.classList.remove('visible');
+    }
+  });
 </script>
 
 </body>

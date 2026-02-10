@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <title>Experience - Liang Yu Lin</title>
+</head>
+<body>
+
+<nav>
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo">
+      <span class="nav-logo-accent"></span>
+      Liang Yu Lin
+    </a>
+    <ul>
+      <li><a href="index.html">About</a></li>
+      <li><a href="experience.html" class="active">Experience</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container">
+  <h1>Experience</h1>
+
+  <!-- Lock It Lending -->
+  <div class="card">
+    <h2>Software Engineer Contractor — Lock It Lending</h2>
+    <p>Developed and deployed the company's production website, handling UI/UX, frontend logic, and backend integration. Implemented a CI/CD pipeline to streamline testing and deployment.</p>
+    <p>
+      <span class="tag blue">React</span>
+      <span class="tag blue">TypeScript</span>
+      <span class="tag dark">CI/CD</span>
+    </p>
+  </div>
+
+  <!-- NASA KBR / LZ Technology -->
+  <div class="card">
+    <h2>Software Engineer Intern — NASA / KBR & LZ Technology</h2>
+    <p>Supported automated testing for NASA's ECLSS and related systems. Took over a testing pipeline that had been stalled due to logging limitations, missing parameters, and restricted commands, then restored and expanded its functionality.</p>
+    <ul>
+      <li>Identified gaps where certain flight software commands and PUI parameters could not be captured or tested, documented these limitations, and communicated what could and could not be validated moving forward.</li>
+      <li>Resolved logging issues by finding a workaround tool to bypass blocked commands, enabling correct data capture for verification.</li>
+      <li>Addressed simulation tool issues where some malfunctions could not be simulated, adding missing steps to ensure proper logging and validation.</li>
+      <li>Implemented a two-step validation approach: sending commands, then manually setting valve/position states to ensure the simulation tool could capture the expected behavior.</li>
+      <li>Upgraded the SSRT validation process from "end-only checking" to step-by-step verification (valve states, light indicators, transitions), improving accuracy and test reliability.</li>
+    </ul>
+    <p>
+      <span class="tag red">NASA</span>
+      <span class="tag blue">Automation</span>
+      <span class="tag dark">Testing</span>
+    </p>
+  </div>
+
+  <!-- Odyssey Space Research -->
+  <div class="card">
+    <h2>Software Engineer Intern — Odyssey Space Research</h2>
+    <p>Worked on the implementation and testing of flight software tools for Sierra Space's Dream Chaser spaceplane. Focused on the tools team, developing monitoring and analytics features to track performance and diagnose issues efficiently.</p>
+    <ul>
+      <li>Resolved tool-related tickets and deployed new features in Pan, an internal tool used for software monitoring.</li>
+      <li>Implemented unit tests in Pypan using Python <code>unittest</code> and <code>mock.patch</code>, improving code quality and ensuring correct behavior for HDF5 data rollup functions.</li>
+      <li>Identified and fixed bugs in the Pan requirements page to improve user experience.</li>
+      <li>Implemented dynamic PDF generation from real-time HTML content using HTML-to-Canvas + jsPDF, handling pagination and asynchronous data rendering.</li>
+      <li>Improved the logging system to ensure accuracy and completeness across workflows.</li>
+    </ul>
+    <p>
+      <span class="tag blue">Python</span>
+      <span class="tag dark">Testing</span>
+      <span class="tag red">Flight Software</span>
+    </p>
+  </div>
+
+  <p class="section-header">Leadership</p>
+
+  <div class="card">
+    <h2>Trading Card Business — Co-owner</h2>
+    <p>Co-owned a trading card resale business with 300+ verified transactions and over $10k in revenue. Managed sourcing, pricing, shipping, and customer relations while maintaining top-ranked reviews.</p>
+    <p>
+      <span class="tag red">E-commerce</span>
+      <span class="tag blue">Business</span>
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>YouTube — Channel Owner</h2>
+    <p>Operated an 8.3k-subscriber TCG-focused channel. Produced content, optimized SEO and thumbnails, and coordinated sponsorships and brand collaborations.</p>
+    <p>
+      <span class="tag red">Content Creation</span>
+      <span class="tag dark">8.3K Subscribers</span>
+    </p>
+  </div>
+</div>
+
+<footer>© 2025 Liang Yu Lin</footer>
+
+<!-- Scroll to top button -->
+<div class="scroll-indicator" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M12 4l-8 8h5v8h6v-8h5z"/>
+  </svg>
+</div>
+
+<script>
+  window.addEventListener('scroll', () => {
+    const indicator = document.querySelector('.scroll-indicator');
+    if (window.scrollY > 300) {
+      indicator.classList.add('visible');
+    } else {
+      indicator.classList.remove('visible');
+    }
+  });
+</script>
+
+</body>
+</html>

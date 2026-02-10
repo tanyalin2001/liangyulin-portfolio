@@ -1,0 +1,102 @@
+@import "tailwindcss";
+
+:root {
+  /* Light Morandi Color Palette */
+  --morandi-blue-50: #f0f4f7;
+  --morandi-blue-100: #e2eaef;
+  --morandi-blue-200: #c8d8e2;
+  --morandi-blue-300: #a2bfcc;
+  --morandi-blue-400: #8daab9;
+  --morandi-blue-500: #7a9bac;
+  --morandi-blue-600: #5c7d8e;
+  --morandi-blue-700: #4a6574;
+  --morandi-blue-800: #3a505d;
+  --morandi-blue-900: #2d3e4a;
+
+  /* Morandi Rose Accent */
+  --morandi-red-300: #c08880;
+  --morandi-red-400: #b07068;
+  --morandi-red-500: #8f5a55;
+
+  /* Morandi Warm Grey & Mauve */
+  --morandi-grey: #ada8a4;
+  --morandi-mauve: #c8bcc4;
+
+  /* Backgrounds — Light */
+  --bg-primary: #f5f7f9;
+  --bg-secondary: #edf1f4;
+  --bg-card: #ffffff;
+
+  /* Text — Dark */
+  --text-primary: #2d3e4a;
+  --text-secondary: #5c7080;
+  --text-muted: #8a9aaa;
+}
+
+@theme inline {
+  --color-background: var(--bg-primary);
+  --color-foreground: var(--text-primary);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+
+  /* Custom Morandi colors */
+  --color-morandi-blue-50: var(--morandi-blue-50);
+  --color-morandi-blue-100: var(--morandi-blue-100);
+  --color-morandi-blue-200: var(--morandi-blue-200);
+  --color-morandi-blue-300: var(--morandi-blue-300);
+  --color-morandi-blue-400: var(--morandi-blue-400);
+  --color-morandi-blue-500: var(--morandi-blue-500);
+  --color-morandi-blue-600: var(--morandi-blue-600);
+  --color-morandi-blue-700: var(--morandi-blue-700);
+  --color-morandi-red-300: var(--morandi-red-300);
+  --color-morandi-red-400: var(--morandi-red-400);
+  --color-morandi-red-500: var(--morandi-red-500);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background:
+      radial-gradient(circle, rgba(162, 191, 204, 0.12) 1px, transparent 1px),
+      linear-gradient(180deg, var(--bg-primary) 0%, var(--bg-secondary) 60%, var(--morandi-blue-50) 100%);
+    background-size: 24px 24px, 100% 100%;
+    background-attachment: fixed;
+    min-height: 100vh;
+    color: var(--text-primary);
+    font-family: var(--font-sans), system-ui, -apple-system, sans-serif;
+  }
+}
+
+@layer base {
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--bg-secondary);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--morandi-blue-300);
+    border-radius: 5px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--morandi-blue-400);
+  }
+
+  /* Selection */
+  ::selection {
+    background: rgba(141, 170, 185, 0.3);
+    color: var(--text-primary);
+  }
+
+  /* Smooth image rendering */
+  img {
+    image-rendering: -webkit-optimize-contrast;
+  }
+}
